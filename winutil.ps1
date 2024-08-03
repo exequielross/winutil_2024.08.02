@@ -13192,14 +13192,6 @@ $inputXML =  '<Window x:Class="WinUtility.MainWindow"
             <Image Height="{WinUtilIconSize}" Width="{WinUtilIconSize}" Name="WPFIcon"
                 SnapsToDevicePixels="True" Source="https://christitus.com/images/logo-full.png" Margin="10"/>
             <ToggleButton HorizontalAlignment="Left" Height="{TabButtonHeight}" Width="{TabButtonWidth}"
-                Background="{ButtonInstallBackgroundColor}" Foreground="white" FontWeight="Bold" Name="WPFTab1BT">
-                <ToggleButton.Content>
-                    <TextBlock FontSize="{TabButtonFontSize}" Background="Transparent" Foreground="{ButtonInstallForegroundColor}" >
-                        <Underline>I</Underline>nstall
-                    </TextBlock>
-                </ToggleButton.Content>
-            </ToggleButton>
-            <ToggleButton HorizontalAlignment="Left" Height="{TabButtonHeight}" Width="{TabButtonWidth}"
                 Background="{ButtonTweaksBackgroundColor}" Foreground="{ButtonTweaksForegroundColor}" FontWeight="Bold" Name="WPFTab2BT">
                 <ToggleButton.Content>
                     <TextBlock FontSize="{TabButtonFontSize}" Background="Transparent" Foreground="{ButtonTweaksForegroundColor}">
@@ -13220,14 +13212,6 @@ $inputXML =  '<Window x:Class="WinUtility.MainWindow"
                 <ToggleButton.Content>
                     <TextBlock FontSize="{TabButtonFontSize}" Background="Transparent" Foreground="{ButtonUpdatesForegroundColor}">
                         <Underline>U</Underline>pdates
-                    </TextBlock>
-                </ToggleButton.Content>
-            </ToggleButton>
-            <ToggleButton HorizontalAlignment="Left" Height="{TabButtonHeight}" Width="{TabButtonWidth}"
-                Background="{ButtonUpdatesBackgroundColor}" Foreground="{ButtonUpdatesForegroundColor}" FontWeight="Bold" Name="WPFTab5BT">
-                <ToggleButton.Content>
-                    <TextBlock FontSize="{TabButtonFontSize}" Background="Transparent" Foreground="{ButtonUpdatesForegroundColor}">
-                        <Underline>M</Underline>icroWin
                     </TextBlock>
                 </ToggleButton.Content>
             </ToggleButton>
@@ -15670,7 +15654,7 @@ Add-Type @"
         Write-Debug "Unable to retrieve information about the primary monitor."
     }
 
-    Invoke-WPFTab "WPFTab1BT"
+    Invoke-WPFTab "WPFTab2BT"
     $sync["Form"].Focus()
 
     # maybe this is not the best place to load and execute config file?
